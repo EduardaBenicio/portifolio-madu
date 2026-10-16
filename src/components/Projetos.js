@@ -7,8 +7,12 @@ export default class Projetos extends Component {
             <p>
                 {this.props.texto}
             </p>
-            <a href="" target="_blank">
-                {this.props.link}
+            <a
+                href={this.props.link}
+                target={this.props.link !== "#sessao_projetos" ? "_blank" : undefined}
+                rel={this.props.link !== "#sessao_projetos" ? "noopener noreferrer" : undefined}
+            >
+                {this.props.nome}
             </a>
         </div>;
     }

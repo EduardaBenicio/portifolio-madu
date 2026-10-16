@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Candara';
+  font-family: 'Jura';
+  color: #FFF;
 }
 
 :root {
@@ -121,7 +122,6 @@ body {
   font-family: Jura;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
   padding-top: 20px;
 }
@@ -139,17 +139,21 @@ body {
 
 .tecnologias-conteiner {
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
   gap: 16px;
-  justify-content: center;
-  align-items: center;
   padding-top: 20px;
   max-width: 850px;
   width: 100%;
+  margin: 0 auto;
   height: fit-content;
+  /* sem align-items aqui — deixa o padrão (stretch) */
 }
 
+.tecnologias-titulo {
+  align-self: flex-start;   /* 👈 só o título vai pra esquerda */
+  margin: 0;
+  padding-left: 10px;
+}
 .tecnologias {
   display: flex;
   max-width: 100%;
@@ -158,24 +162,10 @@ body {
 
 }
 
-.tecnologias img {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  margin-right: 20px;
-}
-
-a {
-  transition: transform 0.3s ease-in-out;
-}
-
-a:hover {
-  transform: scale(1.1);
-  /* Amplia o botão em 10% ao passar o mouse */
-}
-
 .tecnologias-link {
+  width: 130px;
+  height: 130px;
+ 
   transition: transform 0.3s ease-in-out;
 }
 
@@ -187,7 +177,63 @@ a:hover {
 .tecnologias-icons {
   width: 120px;
   height: 120px;
+  padding: 10px 10px;
 }
+.tecnologias .slick-slide > div {
+  padding: 10px 10px;        /* espaço extra em cima/embaixo */
+
+}
+
+.tecnologias img {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.monitoramento {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  gap: 18px;
+
+}
+
+
+/* .monitoramento .slick-track {
+  transform: translate3d(0, 0, 0) !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  width: auto !important;
+} */
+
+/* .monitoramento .slick-slide {
+  float: left !important;
+} */
+
+/* .monitoramento img {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.monitoramento .slick-slide > div {
+  padding: 10px 10px;        
+
+} */
+
+a {
+  transition: transform 0.3s ease-in-out;
+}
+
+a:hover {
+  transform: scale(1.1);
+  /* Amplia o botão em 10% ao passar o mouse */
+}
+
+
+
 
 .dica-arrastar {
   display: flex;
@@ -234,36 +280,60 @@ a:hover {
   margin: 0;
 }
 
+
 .projetos {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
   margin-bottom: 20px;
 }
-
 
 .projeto-item {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  gap: 8px;
+  text-align: center;
+  gap: 12px;
+
   width: 50%;
-  margin-bottom: 50px;
+  box-sizing: border-box;
+  padding: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+
+  margin-bottom: 30px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.projeto-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .projeto-item img {
-  padding: 0;
-  object-fit: contain;
-  width: 300px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
   height: 310px;
+  object-fit: contain;
+  padding: 0;
 }
 
 .projeto-item span {
   color: #FFF;
   font-family: Jura;
   font-size: 20px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
@@ -273,21 +343,33 @@ a:hover {
   text-align: center;
   font-family: Jura;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-  width: 50%;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 350px;
+  margin: 0;
 }
 
 .projeto-item a {
+  display: inline-block;
+  box-sizing: border-box;
   text-decoration: none;
   color: white;
   border: 1px solid white;
+  border-radius: 6px;
   padding: 8px;
   width: 150px;
+  margin-top: auto;
   text-transform: uppercase;
   font-family: Jura;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+.projeto-item a:hover {
+  background: white;
+  color: #222;
+}
+
 
 
 
@@ -350,19 +432,30 @@ a:hover {
 
   .tecnologias {
     width: 74%;
-
+    
   }
 
   .tecnologias-conteiner {
     width: 100%;
     padding-top: 10px;
-
   }
 
   .tecnologias-icons {
     width: 90px;
     height: 90px;
   }
+  
+  .tecnologias .slick-slide > div {
+    min-height: 130px;
+    padding: 6px 0;
+  }
+
+
+  .tecnologias-icons {
+    width: 70px;
+    height: 70px;
+  }
+ 
 
   .redes {
     justify-content: center;

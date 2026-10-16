@@ -14,43 +14,53 @@ import mysql from '../assets/image/tecnologias/mysql.svg'
 import postgre from '../assets/image/tecnologias/postgre.svg'
 import react from '../assets/image/tecnologias/react.svg'
 import spring from '../assets/image/tecnologias/spring.svg'
+import zabbix from '../assets/image/tecnologias/zabbix.svg'
+import karpersky from '../assets/image/tecnologias/karpersky.svg'
+import grafana from '../assets/image/tecnologias/grafana.svg'
+import paloalto from '../assets/image/tecnologias/paloalto.svg'
+import linux from '../assets/image/tecnologias/linux.svg'
+import server from '../assets/image/tecnologias/server.svg'
+import proxmox from '../assets/image/tecnologias/proxmox.svg'
 
-const tecnologias = require.context('../assets/image/tecnologias', false, /\.(png|jpe?g|svg)$/);
-const tecnologiaIcons = tecnologias.keys().map(image => tecnologias(image));
 
-const TecnologiasContainer = ({ tecnologiasIcons }) => {
-  var settings = {
-    infinite: false,
+
+const TecnologiasContainer = () => {
+
+  const total = 9;
+
+  const settings = {
+    infinite: false,                  // só infinito se passar de 8
     speed: 500,
-    slidesToShow: 8,
-    slidesToScroll: 8,
+    slidesToShow: Math.min(8, total),     // nunca mais que o total
+    slidesToScroll: Math.min(8, total),
     initialSlide: 0,
+    arrows: total > 8,                    // setas só se precisar
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: true
         }
       },
       {
-        breakpoint: 600,
-        settings: {
+          breakpoint: 600,
+          settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2
-        }
+          }
       },
       {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3
-        }
+          breakpoint: 480,
+          settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4
+          }
       }
-    ]
+    ],
   };
 
   return (
@@ -58,14 +68,17 @@ const TecnologiasContainer = ({ tecnologiasIcons }) => {
 
     <Slider className="tecnologias" {...settings}>
         <TecnologiasIcons imagem={laravel} />
-        <TecnologiasIcons imagem={bootstrap} />
-        <TecnologiasIcons imagem={css} />
-        <TecnologiasIcons imagem={git} />
-        <TecnologiasIcons imagem={html} />
-        <TecnologiasIcons imagem={mysql} />
-        <TecnologiasIcons imagem={postgre} />
         <TecnologiasIcons imagem={react} />
-        <TecnologiasIcons imagem={spring} />
+        <TecnologiasIcons imagem={git} />
+
+        <TecnologiasIcons imagem={grafana} />
+        <TecnologiasIcons imagem={zabbix} />
+        <TecnologiasIcons imagem={paloalto} />
+        <TecnologiasIcons imagem={karpersky} />
+        
+        <TecnologiasIcons imagem={linux} />
+        <TecnologiasIcons imagem={proxmox} />
+        
     </Slider>
 
 
