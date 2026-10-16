@@ -98,6 +98,7 @@ body {
 }
 
 .nome-apresentacao {
+  margin: 0;
   color: #FFF;
   font-family: Koulen;
   font-size: 50px;
@@ -150,7 +151,7 @@ body {
 }
 
 .tecnologias-titulo {
-  align-self: flex-start;   /* 👈 só o título vai pra esquerda */
+  align-self: flex-start;   /* só o título vai pra esquerda */
   margin: 0;
   padding-left: 10px;
 }
@@ -192,37 +193,6 @@ body {
 }
 
 
-.monitoramento {
-  display: flex;
-  max-width: 100%;
-  width: 100%;
-  gap: 18px;
-
-}
-
-
-/* .monitoramento .slick-track {
-  transform: translate3d(0, 0, 0) !important;
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  width: auto !important;
-} */
-
-/* .monitoramento .slick-slide {
-  float: left !important;
-} */
-
-/* .monitoramento img {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-.monitoramento .slick-slide > div {
-  padding: 10px 10px;        
-
-} */
-
 a {
   transition: transform 0.3s ease-in-out;
 }
@@ -234,22 +204,6 @@ a:hover {
 
 
 
-
-.dica-arrastar {
-  display: flex;
-  align-items: center;
-  align-self: flex-end;
-}
-
-.dica-arrastar-texto {
-  color: #FFF;
-  font-family: Jura;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-}
 
 .sessao-projetos {
   display: flex;
@@ -265,7 +219,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15x;
+  gap: 15px;
   /* width: 1024px; */
 }
 
@@ -330,12 +284,25 @@ a:hover {
   padding: 0;
 }
 
-.projeto-item span {
+.projeto-item h3 {
+  margin: 0;
   color: #FFF;
   font-family: Jura;
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
+}
+
+.projeto-em-breve {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 150px;
+  padding: 8px;
+  margin-top: auto;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  text-transform: uppercase;
+  opacity: 0.7;
 }
 
 .projeto-item p {
@@ -420,19 +387,16 @@ a:hover {
     font-size: 15px;
   }
 
-  .dica-arrastar {
-    align-self: center;
-
-  }
-
-  .dica-arrastar-texto {
-    font-size: 12px;
-    text-align: center;
-  }
-
   .tecnologias {
     width: 74%;
-    
+    margin: 0 auto;
+  }
+
+  .tecnologias-link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .tecnologias-conteiner {

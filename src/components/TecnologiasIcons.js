@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class TecnologiasIcons extends Component {
-    render() {
-        return <div className='tecnologias-link'><img className="tecnologias-icons" src={this.props.imagem} alt="Ícone de tecnologia" /></div>;
-    }
+export default function TecnologiasIcons({ imagem, nome }) {
+    return (
+        <div className="tecnologias-link" title={nome}>
+            <img className="tecnologias-icons" src={imagem} alt={nome} />
+        </div>
+    )
 }
-
