@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -6,20 +6,13 @@ import TecnologiasIcons from './TecnologiasIcons'; // Importe seu componente de 
 
 
 import laravel from '../assets/image/tecnologias/laravel.svg'
-import bootstrap from '../assets/image/tecnologias/bootstrap.svg'
-import css from '../assets/image/tecnologias/css.svg'
 import git from '../assets/image/tecnologias/git.svg'
-import html from '../assets/image/tecnologias/html.svg'
-import mysql from '../assets/image/tecnologias/mysql.svg'
-import postgre from '../assets/image/tecnologias/postgre.svg'
 import react from '../assets/image/tecnologias/react.svg'
-import spring from '../assets/image/tecnologias/spring.svg'
 import zabbix from '../assets/image/tecnologias/zabbix.svg'
 import karpersky from '../assets/image/tecnologias/karpersky.svg'
 import grafana from '../assets/image/tecnologias/grafana.svg'
 import paloalto from '../assets/image/tecnologias/paloalto.svg'
 import linux from '../assets/image/tecnologias/linux.svg'
-import server from '../assets/image/tecnologias/server.svg'
 import proxmox from '../assets/image/tecnologias/proxmox.svg'
 
 

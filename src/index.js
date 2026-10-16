@@ -11,7 +11,6 @@ import sejd from './assets/image/sejd.svg'
 import cajukiosk from './assets/image/cajukiosk.svg'
 import Projetos from './components/Projetos'
 import TecnologiasContainer from './components/TecnologiasContainer'
-import MonitoramentoContainer from './components/MonitoramentoContainer'
 
 const textVitrine = `O projeto voltado a disponibilizar estabelecimentos e prestadores de
                       serviços em forma de vitrine digital, a fim de expor seus produtos e/ou serviços
