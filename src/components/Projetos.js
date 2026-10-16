@@ -3,7 +3,7 @@ export default class Projetos extends Component {
     render() {
         return <div className="projeto-item">
             <span>{this.props.titulo}</span>
-            <img src={this.props.img} />
+            <img src={this.props.img} alt="Imagem do projeto" />
             <p>
                 {this.props.texto}
             </p>

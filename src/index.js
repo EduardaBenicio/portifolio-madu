@@ -37,7 +37,7 @@ class App extends Component {
         <section className="sessao-apresentacao" id='sessao_apresentacao'>
           <div className="dados-apresentacao">
             <div>
-              <img className="foto-apresentacao" src={perfil} />
+              <img className="foto-apresentacao" src={perfil}  alt='Foto da Autora'/>
             </div>
             <div className="informacoes-apresentacao">
               <span className="nome-apresentacao">MARIA EDUARDA BENíCIO</span>
@@ -48,8 +48,8 @@ class App extends Component {
               </span>
               <div className="redes">
 
-                <a href="https://github.com/EduardaBenicio" target="_blank"><img src={github} /></a>
-                <a href="https://www.linkedin.com/in/eduarda-benicio" target="_blank"><img src={linkedin} /></a>
+                <a href="https://github.com/EduardaBenicio" target="_blank" rel="noreferrer"><img src={github} alt='ícone github' /></a>
+                <a href="https://www.linkedin.com/in/eduarda-benicio" target="_blank" rel="noreferrer"><img src={linkedin}  alt='ícone linkedin'/></a>
               </div>
             </div>
           </div>
